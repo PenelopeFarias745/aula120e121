@@ -34,6 +34,7 @@ function gotResult(error, results)
         var synth = window.speechSynthesis;
         speakData = 'O objeto detectado é ' + results[0].label;
         var utterThis = new SpeechSynthesisUtterance(speakData);
+        synth.speak(utterThis);
   
         document.getElementById("resultObjectName").innerHTML = results[0].label;
         document.getElementById("resultObjectAccuracy").innerHTML = results[0].confidence.toFixed(3);
